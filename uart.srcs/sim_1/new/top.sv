@@ -47,6 +47,11 @@ string str="Hello\015\n";
 logic restart_strobe;
 
 initial begin
+    restart_strobe = 0;
+    @(posedge clock);
+    @(posedge clock);
+    @(posedge clock);
+    @(posedge clock);
     forever begin
         @(posedge clock) restart_strobe = 1;
         @(posedge clock) restart_strobe = 0;
