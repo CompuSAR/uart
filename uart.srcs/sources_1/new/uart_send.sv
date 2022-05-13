@@ -51,7 +51,7 @@ begin
         if( fill_level<=1 ) begin
             shift_down();
             if( data_in_ready ) begin
-                shift_register <= { {StopBits{1'b0}}, data_in, {StartBits{1'b1}} };
+                shift_register <= { {StopBits{1'b1}}, data_in, {StartBits{1'b0}} };
 
                 fill_level <= ShiftRegisterSize;
                 div_counter <= 0;
@@ -65,7 +65,7 @@ begin
             div_counter <= div_counter+1;
     end
 
-    if( fill_level==0 )
+    if( fill_level==0 && !data_in_ready )
         div_counter <= ClockDivider-1;
 end
 
