@@ -27,7 +27,7 @@ module uart_send#(
 )
 (
     input clock,
-    input [7:0] data_in,
+    input [DataBits-1:0] data_in,
     input data_in_ready,
 
     output out_bit,
