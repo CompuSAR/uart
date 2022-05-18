@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="10,282.500 ns"></ZoomStartTime>
-      <ZoomEndTime time="11,887.501 ns"></ZoomEndTime>
-      <Cursor1Time time="11,620.000 ns"></Cursor1Time>
+      <ZoomStartTime time="27,563.667 ns"></ZoomStartTime>
+      <ZoomEndTime time="28,945.668 ns"></ZoomEndTime>
+      <Cursor1Time time="28,100.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="211"></NameColumnWidth>
+      <NameColumnWidth column_width="207"></NameColumnWidth>
       <ValueColumnWidth column_width="60"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="7" />
+   <WVObjectSize size="14" />
    <wvobject type="logic" fp_name="/top/clock">
       <obj_property name="ElementShortName">clock</obj_property>
       <obj_property name="ObjectShortName">clock</obj_property>
@@ -51,5 +51,36 @@
       <obj_property name="ElementShortName">index[31:0]</obj_property>
       <obj_property name="ObjectShortName">index[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top/received_data">
+      <obj_property name="ElementShortName">received_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">received_data[7:0]</obj_property>
+      <obj_property name="Radix">ASCIIRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/data_received">
+      <obj_property name="ElementShortName">data_received</obj_property>
+      <obj_property name="ObjectShortName">data_received</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/break_recv">
+      <obj_property name="ElementShortName">break_recv</obj_property>
+      <obj_property name="ObjectShortName">break_recv</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top/error">
+      <obj_property name="ElementShortName">error</obj_property>
+      <obj_property name="ObjectShortName">error</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top/receiver/shift_register">
+      <obj_property name="ElementShortName">shift_register[9:0]</obj_property>
+      <obj_property name="ObjectShortName">shift_register[9:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top/receiver/div_counter">
+      <obj_property name="ElementShortName">div_counter[3:0]</obj_property>
+      <obj_property name="ObjectShortName">div_counter[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top/receiver/state">
+      <obj_property name="ElementShortName">state[31:0]</obj_property>
+      <obj_property name="ObjectShortName">state[31:0]</obj_property>
    </wvobject>
 </wave_config>

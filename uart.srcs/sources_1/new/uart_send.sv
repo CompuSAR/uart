@@ -35,7 +35,7 @@ module uart_send#(
 );
 
 localparam StartBits = 1;
-localparam ShiftRegisterSize = StartBits + DataBits + StartBits;
+localparam ShiftRegisterSize = StartBits + DataBits + StopBits;
 
 logic [$clog2(ClockDivider-1)-1:0] div_counter = ClockDivider-1;
 logic [$clog2(ShiftRegisterSize)-1:0] fill_level = 0;

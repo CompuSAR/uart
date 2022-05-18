@@ -75,4 +75,9 @@ begin
     end
 end
 
+logic[7:0] received_data;
+logic data_received, break_recv, error;
+uart_recv#(.ClockDivider(10))
+ receiver( .clock(clock), .input_bit(uart_out), .data_out(received_data), .data_ready(data_received), .break_received(break_recv), .error(error) );
+
 endmodule
